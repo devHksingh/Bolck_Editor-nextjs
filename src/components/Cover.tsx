@@ -7,7 +7,8 @@ interface CoverPrpos {
 
 const Cover:React.FC<CoverPrpos> = ({url}) => {
   return (
-    <div className="relative w-full h-[35vh] bg-neutral-300">
+    <div className={`relative w-auto h-[35vh] bg-neutral-400 ${
+    !url ?'hidden':''}`}>
         {url && (
             <Image
             src={url}
